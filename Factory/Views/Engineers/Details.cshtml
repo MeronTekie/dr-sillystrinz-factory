@@ -1,4 +1,4 @@
-@{
+ @{
   Layout ="_Layout";
 }
 
@@ -18,7 +18,7 @@ else
 {
   <h5>Machines that belong to: </h5>
   <ul>
-    foreach(var join in Model.JoinEntities)
+    @foreach(var join in Model.JoinEntities)
     {
       <li>@join.Machine.Name</li>
       @using (Html.BeginForm("DeleteMachine","Machines"))
@@ -33,4 +33,4 @@ else
 <h4>@Html.ActionLink("Add a new Machine","Add Machine",new{id =Model.EngineerId})</h4>
 <h4>@Html.ActionLink("Back to List Of Engineers","Index")</h4>
 <h4>@Html.ActionLink("Edit Engineer Details","Edit",new{id =Model.EngineerId})</h4>
-<h4>@Html.ActionLink("Delete Engineer Details","Delete",new{id =Model.EngineerId})</h4>
+<h4>@Html.ActionLink("Delete Engineer Details","Delete",new{id =Model.EngineerId})</h4> 
