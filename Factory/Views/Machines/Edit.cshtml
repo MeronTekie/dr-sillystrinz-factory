@@ -1,0 +1,30 @@
+@{
+  Layout ="_Layout";
+}
+
+@model Factory.Models.Machine
+<h2>Edit</h2>
+
+
+@using (Html.BeginForm())
+{
+  @Html.HiddenFor(model =>model.MachineId)
+
+  @Html.LabelFor(model =>model.Name)
+  @Html.EditorFor(model =>model.Name)
+
+  @Html.LabelFor(model =>model.Make)
+  @Html.EditorFor(model =>model.Make)
+
+  @Html.LabelFor(model =>model.Model)
+  @Html.EditorFor(model =>model.Model)
+
+
+  @Html.LabelFor(model =>model.Year)
+  @Html.EditorFor(model =>model.Year)
+
+  <input type="Submit" value ="Save"/>
+
+}
+
+<p>@Html.ActionLink("Back to list Of Engineers","Index")</p>
