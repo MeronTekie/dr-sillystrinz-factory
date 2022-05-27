@@ -87,6 +87,13 @@ namespace Factory.Controllers
       var thisEngineer = _db.Engineers.FirstOrDefault(engineer =>engineer.EngineerId==id);
       return View(thisEngineer);
     }
+    public ActionResult DeleteConfirmed(int id)
+    {
+      var thisEngineer =_db.Engineers.FirstOrDefault(machine =>machine.EngineerId==id);
+      _db.Engineers.Remove(thisEngineer);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   
   }
 }
