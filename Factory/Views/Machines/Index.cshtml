@@ -11,7 +11,7 @@
 <ul>
   @foreach(Machine machine in Model)
   {
-    <li>@Html.ActionLink($"{machine.Name}", "Details",new{machine =machine.MachineId})</li>
+    <li>@Html.ActionLink($"{machine.Name}", "Details", new {id = machine.MachineId})</li>
   }
 </ul> 
 <h5>@Html.ActionLink("Add a new Machine","Create")</h5>

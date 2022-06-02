@@ -2,16 +2,16 @@
   Layout ="_Layout";
 }
 
-@model Factory.Models.Machine
+@model Factory.Models.Machine;
 
 <h2>Machine's Details</h2>
 
-<h4>@Html.DisplayNameFor(model => model.Name):@Html.DisplayFor(model => model.Name):</h4>
-<h4>@Html.DisplayNameFor(model => model.Make):@Html.DisplayFor(model => model.Make):</h4>
-<h4>@Html.DisplayNameFor(model => model.Model):@Html.DisplayFor(model => model.Model):</h4>
-<h4>@Html.DisplayNameFor(model => model.Year):@Html.DisplayFor(model => model.Year):</h4>
+<h4>@Html.DisplayNameFor(model => model.Name) : @Html.DisplayFor(model => model.Name)</h4>
+<h4>@Html.DisplayNameFor(model => model.Make) : @Html.DisplayFor(model => model.Make)</h4>
+<h4>@Html.DisplayNameFor(model => model.Model) : @Html.DisplayFor(model => model.Model)</h4>
+<h4>@Html.DisplayNameFor(model => model.Year) : @Html.DisplayFor(model => model.Year)</h4>
 
- @if(Model.JoinEntities.Count == 0)
+@if(Model.JoinEntities.Count == 0)
 {
   <h4> The Machine is not assigned to any Engineer yet</h4>
 }

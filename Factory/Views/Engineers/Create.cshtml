@@ -15,6 +15,9 @@
 
   @Html.LabelFor( model =>model.YearsOfExprience )
   @Html.TextBoxFor( model =>model.YearsOfExprience )
+  
+  @Html.Label("Select Machine")
+  @Html.DropDownList("MachineId")
   <input type ="Submit" value ="Register as a new Engineer" />
 }
 
