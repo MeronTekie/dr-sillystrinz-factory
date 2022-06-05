@@ -1,6 +1,5 @@
 using System.Collections.Generic;
 
-
 namespace Factory.Models
 {
   public class Machine
@@ -10,11 +9,9 @@ namespace Factory.Models
       this.JoinEntities = new HashSet<MachineEngineer>();
     }
     public int MachineId { get; set; }
-    public  string Name { get; set; }
-
+    public string Name { get; set; }
     public string Make { get; set; }
-
-    public string Model { get; set;}
+    public string Model { get; set; }
     public int Year { get; set; }
     public virtual ICollection<MachineEngineer> JoinEntities { get; set; }
   }

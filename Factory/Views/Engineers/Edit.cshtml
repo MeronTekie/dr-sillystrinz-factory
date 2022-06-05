@@ -19,6 +19,9 @@
   @Html.LabelFor(model =>model.YearsOfExprience)
   @Html.EditorFor(model =>model.YearsOfExprience)
 
+    @Html.Label("Select a Machine")
+  @Html.DropDownList("MachineId")
+
   <input type="Submit" value ="Save"/>
 
 }
